@@ -79,7 +79,7 @@ This leads us to the concept of **Event‑Driven Programming**.
 
 Event‑driven programming is a paradigm where the **flow of the program is determined by user actions (events)**.
 
-![Dummy Visual Programming Illustration](https://via.placeholder.com/800x300?text=Visual+Programming+with+C%23+and+.NET)
+![Event Driven Programming](image2.png)
 
 ### Common Events
 
