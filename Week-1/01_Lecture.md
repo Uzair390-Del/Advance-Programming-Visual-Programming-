@@ -162,6 +162,7 @@ Consider a scenario where a person speaks English and another understands only m
 ## Common Language Runtime (CLR)
 
 The Common Language Runtime (CLR) is a core component of the .NET platform and is responsible for the actual execution of applications.
+![Common Language Runtime(CLR)](image3.png)
 
 ### Responsibilities of the CLR
 
