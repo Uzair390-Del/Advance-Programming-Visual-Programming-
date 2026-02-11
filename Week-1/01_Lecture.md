@@ -9,12 +9,12 @@
 ### Why This Lecture Matters
 
 * Modern software is **interactive**, **visual**, and **event‑driven**
-* C# with .NET is widely used in **industry**, **academia**, and **enterprise systems**(integrated software application that centralizes and manages an organization's core business processes like finance, HR, sales,)
+* C# with .NET is widely used in **industry**, **academia**, and **enterprise systems**   (integrated software application that centralizes and manages an organization's core business processes like finance, HR, sales,)
 * Visual programming helps beginners **see** how programs work instead of only imagining logic
 
 ### Real‑World Connection
 
-* ATM machines 🏧
+* ATM machines 
 * Desktop billing systems
 * Hospital management software
 * Educational tools with buttons, forms, and menus
@@ -96,7 +96,7 @@ Event‑driven programming is a paradigm where the **flow of the program is dete
 
 ## Event‑Driven Programming – Real Life Analogy
 
-### Door Bell Analogy 🚪🔔
+### Door Bell Analogy
 
 * You do nothing until someone presses the doorbell
 * When bell rings → you respond
