@@ -9,7 +9,7 @@
 ### Why This Lecture Matters
 
 * Modern software is **interactive**, **visual**, and **event‑driven**
-* C# with .NET is widely used in **industry**, **academia**, and **enterprise systems**
+* C# with .NET is widely used in **industry**, **academia**, and **enterprise systems**(integrated software application that centralizes and manages an organization's core business processes like finance, HR, sales,)
 * Visual programming helps beginners **see** how programs work instead of only imagining logic
 
 ### Real‑World Connection
