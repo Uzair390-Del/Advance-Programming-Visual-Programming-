@@ -136,10 +136,9 @@ int main()
 
     return 0;
 }
-'''
 
 
----
+```
 
 ## Explanation
 
@@ -147,7 +146,6 @@ int main()
 - deposit() is public → allows controlled modification  
 - showBalance() → allows safe viewing  
 
----
 
 # Structure in C++
 
