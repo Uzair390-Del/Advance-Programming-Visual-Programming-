@@ -219,8 +219,8 @@ cout << s1.name;
 
 Think of a student admission form:
 
--   Roll Number\
--   Name\
+-   Roll Number
+-   Name
 -   Marks
 
 All grouped together under one entity → **Student**
@@ -264,8 +264,8 @@ int main()
 
 In traditional C++:
 
--   All members are public by default\
--   No strong data protection\
+-   All members are public by default
+-   No strong data protection
 -   Less security compared to class
 
 This leads us to **Class**.
@@ -280,14 +280,14 @@ This leads us to **Class**.
 
 A class is a user-defined data type that contains:
 
--   Data members (variables)\
+-   Data members (variables)
 -   Member functions (functions)
 
 It supports full OOP features like:
 
--   Encapsulation\
--   Data hiding\
--   Inheritance\
+-   Encapsulation
+-   Data hiding
+-   Inheritance
 -   Polymorphism
 
 ------------------------------------------------------------------------
@@ -341,9 +341,9 @@ int main()
 
 # Why Class is Better than Structure?
 
--   Provides data protection\
--   Controls access using private and public\
--   Supports advanced OOP features\
+-   Provides data protection
+-   Controls access using private and public
+-   Supports advanced OOP features
 -   Suitable for large software systems
 
 ------------------------------------------------------------------------
@@ -358,18 +358,18 @@ A simple form that just holds data.
 
 A complete system that:
 
--   Holds data\
--   Validates data\
+-   Holds data
+-   Validates data
 -   Controls how data is accessed
 
 ------------------------------------------------------------------------
 
 # Summary of Today's Lecture
 
--   OOP organizes programs using objects\
--   Data hiding protects internal data\
--   Encapsulation wraps data and functions together\
--   Structure groups data but has limited protection\
+-   OOP organizes programs using objects
+-   Data hiding protects internal data
+-   Encapsulation wraps data and functions together
+-   Structure groups data but has limited protection
 -   Class provides full OOP features
 
 ------------------------------------------------------------------------
@@ -380,12 +380,12 @@ A complete system that:
 
 Discuss in pairs and answer verbally.
 
-1.  What is the difference between data hiding and encapsulation?\
-2.  Why is private data important in a class?\
-3.  What operator is used to access structure members?\
+1.  What is the difference between data hiding and encapsulation?
+2.  Why is private data important in a class?
+3.  What operator is used to access structure members?
 4.  What is the default access specifier in:
-    -   struct?\
-    -   class?\
+    -   struct?
+    -   class?
 5.  Which one is more secure: structure or class? Why?
 
 ------------------------------------------------------------------------
@@ -394,8 +394,8 @@ Discuss in pairs and answer verbally.
 
 Create a structure named **Car** with:
 
--   brand\
--   model\
+-   brand
+-   model
 -   price
 
 Then print its values.
@@ -411,8 +411,8 @@ we use struct or class? Why?
 
 # What's Next?
 
--   Constructors in C++\
--   Member Functions in Detail\
+-   Constructors in C++
+-   Member Functions in Detail
 -   Object Creation and Memory Concepts
 
 ------------------------------------------------------------------------
