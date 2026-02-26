@@ -136,6 +136,7 @@ int main()
 
     return 0;
 }
+'''
 
 
 ---
@@ -158,23 +159,23 @@ A structure (struct) is a user-defined data type that groups different data type
 
 It is used to represent a record.
 
----
-
 ## Declaring a Structure
 
 ### Syntax
 
-```cpp
+``` cpp
+
 struct StructureName
 {
     dataType member1;
     dataType member2;
 };
+
 ```
 
 
 ### Example: Student Structure
-'''cpp
+``` cpp
 #include <iostream>
 using namespace std;
 
@@ -211,6 +212,7 @@ s1.name = "Ali";
 s1.marks = 85.5;
 
 cout << s1.name;
+
 ```
 
 ------------------------------------------------------------------------
