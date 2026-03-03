@@ -415,6 +415,185 @@ public partial class Form1 : Form
 
 ---
 
+
+# 6️⃣ Label Control
+
+## Overview
+
+Label is one of the most widely used controls in .NET Windows Forms.
+
+It is used to:
+
+- Display text
+- Show instructions
+- Provide descriptions
+- Display dynamic information
+
+Labels are mainly used for **display purposes only**.
+
+---
+
+## Important Note About Events
+
+Although labels technically support events (like Click), it is **not recommended to use events with labels**.
+
+Reason:
+
+- Labels are meant for displaying information.
+- They are not interactive controls like buttons.
+- For user interaction, always prefer using Button instead.
+
+---
+
+## Common Label Properties
+
+Label has almost the same properties as Button, such as:
+
+- Text
+- Name
+- Font
+- ForeColor
+- BackColor
+- Anchor
+- Dock
+- Visible
+- Enabled
+- AutoSize
+
+---
+
+## Example – Changing Label Text
+
+```csharp
+private void button1_Click(object sender, EventArgs e)
+{
+    label1.Text = "Button was clicked!";
+}
+```
+
+---
+
+# 7️⃣ Important Control Properties
+
+## Overview
+
+All controls (Button, Label, TextBox) share many common properties.
+
+---
+
+## 🔹 Anchor Property
+
+Keeps control fixed relative to form edges during resizing.
+
+Example:
+- Top
+- Bottom
+- Left
+- Right
+
+---
+
+## 🔹 Dock Property
+
+Attaches control to a side of the form.
+
+Options:
+- Top
+- Bottom
+- Left
+- Right
+- Fill
+
+---
+
+## 🔹 Visible Property
+
+Shows or hides control.
+
+```csharp
+button1.Visible = false;
+```
+
+---
+
+## 🔹 Enabled Property
+
+Enables or disables control.
+
+```csharp
+button1.Enabled = false;
+```
+
+---
+
+## 🔹 Text Property
+
+Changes displayed text.
+
+```csharp
+label1.Text = "Welcome!";
+```
+
+---
+
+# 8️⃣ Understanding Events in Windows Forms
+
+## Overview
+
+An event is an action triggered by user or system.
+
+Examples:
+
+- Click
+- Load
+- KeyPress
+- MouseHover
+
+Event structure:
+
+```csharp
+private void ControlName_EventName(object sender, EventArgs e)
+{
+    // event logic
+}
+```
+
+---
+
+# Complete Example Covered in Class
+
+```csharp
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        label1.Text = "First Button Clicked!";
+        MessageBox.Show("First Button Clicked!");
+    }
+
+    private void firstBtn_Click(object sender, EventArgs e)
+    {
+        firstBtn.Text = "Clicked!";
+    }
+
+    private void firstBtn_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        firstBtn.Text = "Enter";
+    }
+}
+```
+
+---
+
 # Final Lab Practice Tasks
 
 1. Create a Windows Forms application.
