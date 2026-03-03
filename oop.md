@@ -168,6 +168,7 @@ struct StructureName
     dataType member1;
     dataType member2;
 };
+....
 
 ```
 
