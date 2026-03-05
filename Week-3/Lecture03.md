@@ -1,5 +1,5 @@
 ![Common Language Runtime(CLR)](.netRoadMap.png)
-![Common Language Runtime(CLR)](Framework.png)
+
 
 # Understanding the .NET Ecosystem
 ## Frameworks, Architecture & Application Domains
@@ -75,13 +75,7 @@ Frameworks are built on top of .NET.
 
 # .NET Hierarchy Overview
 
-C# (Language)
-↓
-.NET Platform
-↓
-Frameworks
-↓
-Cloud Hosting
+![.NET Hierarchy](Framework.png)
 
 ---
 
