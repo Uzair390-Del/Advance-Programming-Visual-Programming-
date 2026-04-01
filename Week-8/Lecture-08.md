@@ -35,7 +35,7 @@ These systems cannot be built using a single file or simple logic—they require
 
 ---
 
-# 🧠 Understanding the Need for Architecture
+#  Understanding the Need for Architecture
 
 ## Problem Without Architecture
 
@@ -56,7 +56,7 @@ This leads us to N-Tier Architecture.
 
 ---
 
-# 🏗️ N-Tier Architecture
+#  N-Tier Architecture
 
 ## What is N-Tier Architecture?
 
@@ -142,7 +142,7 @@ Separation of Concerns = Each layer focuses on one responsibility only
 
 ---
 
-# 🌐 MVC Architecture (Model–View–Controller)
+# MVC Architecture (Model–View–Controller)
 
 ## What is MVC?
 
@@ -214,7 +214,7 @@ MVC separates UI, Logic, and Data handling within the UI layer
 
 ---
 
-# ⚖️ N-Tier vs MVC
+#  N-Tier vs MVC
 
 | Feature | N-Tier Architecture | MVC |
 |--------|--------------------|-----|
@@ -236,7 +236,7 @@ This means:
 
 ---
 
-# 🧪 N-Tier & MVC in .NET
+#  N-Tier & MVC in .NET
 
 ## In Desktop Applications
 
