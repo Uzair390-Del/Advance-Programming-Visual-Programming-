@@ -1,4 +1,4 @@
-# 📘 Lecture: N-Tier Architecture & MVC (Advanced Programming)
+#  Lecture: N-Tier Architecture & MVC (Advanced Programming)
 
 ---
 
@@ -286,7 +286,7 @@ Both improve:
 
 ---
 
-# 📌 What’s Next?
+#  What’s Next?
 
 - Implementing N-Tier in C#  
 - Building a simple MVC web application  
