@@ -263,11 +263,11 @@ public ActionResult GoToProduct()
     return RedirectToAction("AddProduct", "Product");
 }
 
-👉 This means:
+ This means:
 
 Go to AddProduct action
 Inside ProductController
-📥 Passing Parameters in Action Methods
+ Passing Parameters in Action Methods
 
 We can also pass data (parameters) to action methods.
 
@@ -283,20 +283,20 @@ public ActionResult UpdateProduct(int id)
 return RedirectToAction("UpdateProduct", "Product", new { id = 20 });
 ```
 
-👉 Output:
+ Output:
 
 Product ID: 20
-🧠 Behind the Scene (Routing Concept)
+ Behind the Scene (Routing Concept)
 MVC uses a routing system to map URLs to actions
 Example URL:
 /Product/UpdateProduct/20
 
-👉 This means:
+ This means:
 
 Controller → Product
 Action → UpdateProduct
 Parameter → 20
-⚠️ Important Notes
+- Important Notes
 Controller name is written without "Controller" in URLs and redirects
 Action methods must be public
 Action methods usually return ActionResult
@@ -335,31 +335,31 @@ They return results using ActionResult
 
 
 
-# 📘 Lecture: Views in ASP.NET MVC
+#  Views in ASP.NET MVC
 
 ---
 
-## 📌 Introduction
+##  Introduction
 
 In ASP.NET MVC, after learning about **Controllers and Action Methods**, the next important component is:
 
 > **View (User Interface Layer)**
 
-👉 Views are responsible for **what the user sees on the screen**.
+Views are responsible for **what the user sees on the screen**.
 
 ---
 
-## 🧠 What is a View?
+## What is a View?
 
 A **View** is the part of MVC that handles the **User Interface (UI)**.
 
-👉 In simple words:
+ In simple words:
 
 > A View is used to **display data to the user**.
 
 ---
 
-## 💡 Key Idea
+##  Key Idea
 
 - Views contain **UI elements** such as:
   - Textboxes  
@@ -372,24 +372,24 @@ A **View** is the part of MVC that handles the **User Interface (UI)**.
   - CSS  
   - JavaScript  
 
-👉 Users can only see the **View**, not the controller or model.
+ Users can only see the **View**, not the controller or model.
 
 ---
 
-## 📁 Where Are Views Stored?
+##  Where Are Views Stored?
 
 - All views are stored inside the **Views Folder**
 
-👉 Important concept:
+ Important concept:
 
 > Each **Controller has its own View folder**
 
 ### Example Structure:
-# 📘 Views in ASP.NET MVC (Complete Notes)
+#  Views in ASP.NET MVC (Complete Notes)
 
 ---
 
-## 📁 Views Folder Structure
+##  Views Folder Structure
 
 ```
 Views/
@@ -398,13 +398,13 @@ Views/
 ├── Student/
 ```
 
-👉 This means:
+ This means:
 - `HomeController` → Views in **Home folder**
 - `ProductController` → Views in **Product folder**
 
 ---
 
-## 📄 View File Extension
+##  View File Extension
 
 Views in MVC usually have extension:
 
@@ -412,14 +412,14 @@ Views in MVC usually have extension:
 .cshtml
 ```
 
-👉 This means:
+ This means:
 - Combination of **C# + HTML**
 
 ---
 
-## 🔁 Relation Between Controller and View
+##  Relation Between Controller and View
 
-👉 Rule:
+Rule:
 
 > Each **Action Method should have a View** (in most cases)
 
@@ -432,13 +432,13 @@ public ActionResult Index()
 }
 ```
 
-👉 This means:
+ This means:
 
 MVC will look for a view named **Index.cshtml**
 
 ---
 
-## 🛠️ Step-by-Step: Creating a View
+##  Step-by-Step: Creating a View
 
 ### Step 1: Open Controller
 Go to your controller (e.g., HomeController)
@@ -451,15 +451,15 @@ Go to your controller (e.g., HomeController)
 - View Name → Keep same as Action (recommended)
 - Layout → Select or leave empty (for now)
 
-👉 Layout is like a **master page (common design)**
+ Layout is like a **master page (common design)**
 
 ### Step 4: Click Add
 
-👉 A new `.cshtml` file will be created automatically
+ A new `.cshtml` file will be created automatically
 
 ---
 
-## 🧩 Understanding View Content
+##  Understanding View Content
 
 Inside a View, we write:
 
@@ -475,9 +475,9 @@ Inside a View, we write:
 
 ---
 
-## ▶️ Running the Application with View
+##  Running the Application with View
 
-👉 Important:
+ Important:
 
 MVC application usually runs using **View Pages**
 
@@ -487,14 +487,14 @@ MVC application usually runs using **View Pages**
 /Home/Index
 ```
 
-👉 This will:
+ This will:
 
 - Call `Index()` action  
 - Return `Index.cshtml` view  
 
 ---
 
-## 🔄 Views with Redirects
+##  Views with Redirects
 
 From previous lecture:
 
@@ -502,13 +502,13 @@ From previous lecture:
 return RedirectToAction("AddProduct", "Product");
 ```
 
-👉 Important concept:
+ Important concept:
 
 > If you redirect to an action, that action must also have a View
 
 ---
 
-## 🧪 Example: View with Redirect
+##  Example: View with Redirect
 
 ### Step 1: Controller Code
 
@@ -526,11 +526,11 @@ You must create:
 - `GoToProduct.cshtml` (optional but safe)  
 - `AddProduct.cshtml` (required)
 
-👉 Otherwise, error will occur
+ Otherwise, error will occur
 
 ---
 
-## 📥 Views with Parameters
+##  Views with Parameters
 
 ### Example:
 
@@ -547,13 +547,13 @@ public ActionResult UpdateProduct(int id)
 /Product/UpdateProduct/20
 ```
 
-👉 This means:
+ This means:
 
 - View will open with **id = 20**
 
 ---
 
-## 🧠 Behind the Scene (Routing + Views)
+##  Behind the Scene (Routing + Views)
 
 Routing connects:
 
@@ -561,7 +561,7 @@ Routing connects:
 URL → Controller → Action → View
 ```
 
-👉 Flow:
+ Flow:
 
 ```
 User → Controller → Action → View → Browser Output
@@ -569,7 +569,7 @@ User → Controller → Action → View → Browser Output
 
 ---
 
-## 🎨 Technologies Used in Views
+##  Technologies Used in Views
 
 In View pages, we use:
 
@@ -577,7 +577,7 @@ In View pages, we use:
 - CSS → Design  
 - JavaScript → Dynamic behavior  
 
-👉 This makes UI:
+ This makes UI:
 
 - Interactive  
 - User-friendly  
@@ -585,7 +585,7 @@ In View pages, we use:
 
 ---
 
-## ⚠️ Important Notes
+##  Important Notes
 
 - Each action should have a corresponding view (recommended)  
 - View name should match action name  
@@ -594,7 +594,7 @@ In View pages, we use:
 
 ---
 
-## 🧪 Mini Practice
+##  Mini Practice
 
 ### Task:
 
@@ -629,21 +629,21 @@ Create:
 
 ---
 
-## 📝 Summary
+##  Summary
 
 - View is responsible for **UI (User Interface)**  
 - It displays data to the user  
 - Uses HTML, CSS, JavaScript  
 - Connected with Controller via Action Methods  
 
-👉 In short:
+ In short:
 
 - **View = What User Sees**  
 - **Controller = What System Does**
 
 ---
 
-## 📌 What’s Next?
+##  What’s Next?
 
 In next lecture:
 
@@ -653,15 +653,15 @@ In next lecture:
 
 ---
 
-# 📘 Lecture: Layouts in ASP.NET MVC
+#  Lecture: Layouts in ASP.NET MVC
 
 ---
 
-## 📌 Introduction
+##  Introduction
 
 In ASP.NET MVC, when building real applications, many UI parts are **common across multiple pages**.
 
-👉 Examples:
+ Examples:
 - Header (Logo)
 - Navigation Bar
 - Footer
@@ -672,17 +672,17 @@ Instead of repeating this code again and again, MVC provides:
 
 ---
 
-## 🧠 What is a Layout?
+##  What is a Layout?
 
 A **Layout** is a special view that contains **common UI structure** shared across multiple pages.
 
-👉 In simple words:
+ In simple words:
 
 > Layout = **Master Page (common design for all pages)**
 
 ---
 
-## 💡 Key Idea
+##  Key Idea
 
 - Layout contains common UI parts:
   - Header  
@@ -693,11 +693,11 @@ A **Layout** is a special view that contains **common UI structure** shared acro
   - Code repetition  
   - Duplicate UI design  
 
-👉 So, we write UI once and reuse it everywhere.
+ So, we write UI once and reuse it everywhere.
 
 ---
 
-## 📁 Where is Layout Stored?
+##  Where is Layout Stored?
 
 Layouts are usually stored in:
 
@@ -705,7 +705,7 @@ Layouts are usually stored in:
 Views/Shared/
 ```
 
-👉 Example:
+ Example:
 
 ```
 Views/
@@ -715,7 +715,7 @@ Views/
 
 ---
 
-## 🧩 Important Concept: RenderBody()
+##  Important Concept: RenderBody()
 
 In Layout file, we use:
 
@@ -723,23 +723,23 @@ In Layout file, we use:
 @RenderBody()
 ```
 
-👉 Meaning:
+ Meaning:
 
 > This is the place where **View content will be inserted**
 
 ---
 
-## 🧠 Flow of Layout Usage
+##  Flow of Layout Usage
 
 ```
 View → Layout → RenderBody() → Final Page Output
 ```
 
-👉 Layout wraps the View content.
+ Layout wraps the View content.
 
 ---
 
-## 🛠️ Step-by-Step: Creating a Layout
+##  Step-by-Step: Creating a Layout
 
 ### Step 1: Go to Shared Folder
 
@@ -771,11 +771,11 @@ Example:
 <h3>Layout Footer</h3>
 ```
 
-👉 This creates a basic layout structure.
+ This creates a basic layout structure.
 
 ---
 
-## 🧪 Creating Controller for Layout Demo
+##  Creating Controller for Layout Demo
 
 ### Step 1: Create Controller
 
@@ -801,7 +801,7 @@ public class EmployeeController : Controller
 
 ---
 
-## 🛠️ Adding Views with Layout
+##  Adding Views with Layout
 
 ### Step 1: Add View
 
@@ -818,15 +818,15 @@ public class EmployeeController : Controller
 
 ### Step 3: Click Add
 
-👉 View is now connected with Layout.
+ View is now connected with Layout.
 
 ---
 
-## ▶️ Output Behavior
+## ▶ Output Behavior
 
 When you run:
 
-👉 You will see:
+ You will see:
 
 - Header (from Layout)  
 - Footer (from Layout)  
@@ -834,27 +834,27 @@ When you run:
 
 ---
 
-## 🔄 Multiple Views with Same Layout
+##  Multiple Views with Same Layout
 
 Create views for:
 
 - `AddEmployee`
 - `UpdateEmployee`
 
-👉 All will use same layout
+ All will use same layout
 
 ---
 
-## 🧠 Key Observation
+##  Key Observation
 
 - Header and Footer → SAME  
 - Content → DIFFERENT  
 
-👉 Only **View content changes**, layout remains same.
+ Only **View content changes**, layout remains same.
 
 ---
 
-## 🎨 Why Layout is Important?
+##  Why Layout is Important?
 
 - Reusable UI  
 - Cleaner code  
@@ -863,7 +863,7 @@ Create views for:
 
 ---
 
-## ⚠️ Important Notes
+##  Important Notes
 
 - Layout is optional but highly recommended  
 - Stored in `Shared` folder  
@@ -872,7 +872,7 @@ Create views for:
 
 ---
 
-## 🧪 Mini Practice
+##  Mini Practice
 
 ### Task:
 
@@ -889,20 +889,20 @@ Create views for:
 
 ---
 
-## 📝 Summary
+##  Summary
 
 - Layout is a **common UI template**  
 - Avoids code duplication  
 - Uses `@RenderBody()` to inject view content  
 
-👉 In short:
+ In short:
 
 - **Layout = Common Design**  
 - **View = Page Content**
 
 ---
 
-## 📌 What’s Next?
+##  What’s Next?
 
 In next lecture:
 
@@ -910,11 +910,11 @@ In next lecture:
 - Reusable UI components inside pages  
 
 ---
-## 📌 Introduction
+##  Introduction
 
 In the previous lecture, we learned about **Layouts**, which are used for common UI across all pages.
 
-👉 But sometimes, we need reusable UI only for **some specific pages**, not all.
+ But sometimes, we need reusable UI only for **some specific pages**, not all.
 
 For this purpose, MVC provides:
 
@@ -922,17 +922,17 @@ For this purpose, MVC provides:
 
 ---
 
-## 🧠 What is a Partial View?
+##  What is a Partial View?
 
 A **Partial View** is a reusable UI component that can be used in multiple views.
 
-👉 In simple words:
+ In simple words:
 
 > Partial View = **Reusable small UI block**
 
 ---
 
-## 💡 Key Idea
+##  Key Idea
 
 - Used for **common UI in some pages (not all)**
 - Avoids repeating same code
@@ -943,26 +943,26 @@ A **Partial View** is a reusable UI component that can be used in multiple views
 
 ---
 
-## 🧩 Real-World Example
+##  Real-World Example
 
 Suppose you have:
 
 - Add Employee Page  
 - Update Employee Page  
 
-👉 Both need:
+ Both need:
 - Name  
 - Salary  
 
 But another page (e.g., Category Page) does NOT need salary.
 
-👉 So instead of repeating code:
+- So instead of repeating code:
 
 > We create a **Partial View** for Employee Form
 
 ---
 
-## 📁 Where to Create Partial Views?
+##  Where to Create Partial Views?
 
 Usually inside controller-specific folder:
 
@@ -974,7 +974,7 @@ Views/
 
 ---
 
-## 🛠️ Step-by-Step: Creating a Partial View
+##  Step-by-Step: Creating a Partial View
 
 ### Step 1: Create Folder
 
@@ -1000,7 +1000,7 @@ _EmployeeForm.cshtml
 
 ---
 
-## 🧩 Writing Partial View Code
+##  Writing Partial View Code
 
 Example:
 
@@ -1014,11 +1014,11 @@ Example:
 <button type="submit">Submit</button>
 ```
 
-👉 This is a reusable form UI
+ This is a reusable form UI
 
 ---
 
-## 🔗 Using Partial View in Main View
+##  Using Partial View in Main View
 
 To use partial in a view:
 
@@ -1026,11 +1026,11 @@ To use partial in a view:
 @Html.Partial("~/Views/Employee/Partial/_EmployeeForm.cshtml")
 ```
 
-👉 This will render the partial inside your page.
+ This will render the partial inside your page.
 
 ---
 
-## 🧪 Using Partial in Multiple Views
+##  Using Partial in Multiple Views
 
 ### In AddEmployee.cshtml
 
@@ -1046,28 +1046,28 @@ To use partial in a view:
 
 ---
 
-## ▶️ Output Behavior
+##  Output Behavior
 
-👉 Both pages will show:
+ Both pages will show:
 
 - Name textbox  
 - Salary textbox  
 - Submit button  
 
-👉 But:
+ But:
 
 - Index page → No partial (if not added)
 
 ---
 
-## 🧠 Key Observation
+##  Key Observation
 
 - Partial is only used where needed  
 - Not applied globally like Layout  
 
 ---
 
-## 🎨 When to Use Partial Views?
+##  When to Use Partial Views?
 
 Use Partial Views when:
 
@@ -1075,7 +1075,7 @@ Use Partial Views when:
 - Forms are repeated  
 - Small UI components are reused  
 
-👉 Examples:
+ Examples:
 
 - Forms  
 - Message sections  
@@ -1083,7 +1083,7 @@ Use Partial Views when:
 
 ---
 
-## ⚠️ Important Notes
+##  Important Notes
 
 - Partial Views are optional  
 - Used for specific reuse, not global UI  
@@ -1092,7 +1092,7 @@ Use Partial Views when:
 
 ---
 
-## 🧪 Mini Practice
+##  Mini Practice
 
 **Task:**
 
@@ -1112,21 +1112,21 @@ Use Partial Views when:
 
 ---
 
-## 📝 Summary
+##  Summary
 
 - Partial View = Reusable UI component  
 - Used in multiple views  
 - Avoids code repetition  
 - Improves maintainability  
 
-👉 In short:
+ In short:
 
 - Layout = Common for ALL pages  
 - Partial = Common for SOME pages  
 
 ---
 
-## 📌 What’s Next?
+##  What’s Next?
 
 In next lecture:
 
