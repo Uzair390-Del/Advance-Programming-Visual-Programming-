@@ -647,3 +647,261 @@ In next lecture:
 - Reusable design  
 
 ---
+
+# 📘 Lecture: Layouts in ASP.NET MVC
+
+---
+
+## 📌 Introduction
+
+In ASP.NET MVC, when building real applications, many UI parts are **common across multiple pages**.
+
+👉 Examples:
+- Header (Logo)
+- Navigation Bar
+- Footer
+
+Instead of repeating this code again and again, MVC provides:
+
+> **Layouts**
+
+---
+
+## 🧠 What is a Layout?
+
+A **Layout** is a special view that contains **common UI structure** shared across multiple pages.
+
+👉 In simple words:
+
+> Layout = **Master Page (common design for all pages)**
+
+---
+
+## 💡 Key Idea
+
+- Layout contains common UI parts:
+  - Header  
+  - Footer  
+  - Navigation  
+
+- It avoids:
+  - Code repetition  
+  - Duplicate UI design  
+
+👉 So, we write UI once and reuse it everywhere.
+
+---
+
+## 📁 Where is Layout Stored?
+
+Layouts are usually stored in:
+
+```
+Views/Shared/
+```
+
+👉 Example:
+
+```
+Views/
+ ├── Shared/
+ │    ├── _Layout.cshtml
+```
+
+---
+
+## 🧩 Important Concept: RenderBody()
+
+In Layout file, we use:
+
+```csharp
+@RenderBody()
+```
+
+👉 Meaning:
+
+> This is the place where **View content will be inserted**
+
+---
+
+## 🧠 Flow of Layout Usage
+
+```
+View → Layout → RenderBody() → Final Page Output
+```
+
+👉 Layout wraps the View content.
+
+---
+
+## 🛠️ Step-by-Step: Creating a Layout
+
+### Step 1: Go to Shared Folder
+
+- Open `Views/Shared`
+
+---
+
+### Step 2: Add New Layout
+
+1. Right-click → Add → New Item  
+2. Select **Layout Page**  
+3. Name it:
+
+```
+EmployeeLayout.cshtml
+```
+
+---
+
+### Step 3: Add Basic UI
+
+Example:
+
+```html
+<h1>Layout Header</h1>
+
+@RenderBody()
+
+<h3>Layout Footer</h3>
+```
+
+👉 This creates a basic layout structure.
+
+---
+
+## 🧪 Creating Controller for Layout Demo
+
+### Step 1: Create Controller
+
+```csharp
+public class EmployeeController : Controller
+{
+    public ActionResult Index()
+    {
+        return View();
+    }
+
+    public ActionResult AddEmployee()
+    {
+        return View();
+    }
+
+    public ActionResult UpdateEmployee()
+    {
+        return View();
+    }
+}
+```
+
+---
+
+## 🛠️ Adding Views with Layout
+
+### Step 1: Add View
+
+- Right-click on `Index()` → Add View  
+
+---
+
+### Step 2: Select Layout
+
+- Choose:
+  - `EmployeeLayout.cshtml`
+
+---
+
+### Step 3: Click Add
+
+👉 View is now connected with Layout.
+
+---
+
+## ▶️ Output Behavior
+
+When you run:
+
+👉 You will see:
+
+- Header (from Layout)  
+- Footer (from Layout)  
+- Content (from View)  
+
+---
+
+## 🔄 Multiple Views with Same Layout
+
+Create views for:
+
+- `AddEmployee`
+- `UpdateEmployee`
+
+👉 All will use same layout
+
+---
+
+## 🧠 Key Observation
+
+- Header and Footer → SAME  
+- Content → DIFFERENT  
+
+👉 Only **View content changes**, layout remains same.
+
+---
+
+## 🎨 Why Layout is Important?
+
+- Reusable UI  
+- Cleaner code  
+- Easy maintenance  
+- Professional structure  
+
+---
+
+## ⚠️ Important Notes
+
+- Layout is optional but highly recommended  
+- Stored in `Shared` folder  
+- Uses `@RenderBody()` to inject content  
+- Multiple views can share one layout  
+
+---
+
+## 🧪 Mini Practice
+
+### Task:
+
+1. Create `EmployeeController`  
+2. Add actions:
+   - Index  
+   - AddEmployee  
+   - UpdateEmployee  
+
+3. Create Layout:
+   - Add header and footer  
+
+4. Link layout with all views  
+
+---
+
+## 📝 Summary
+
+- Layout is a **common UI template**  
+- Avoids code duplication  
+- Uses `@RenderBody()` to inject view content  
+
+👉 In short:
+
+- **Layout = Common Design**  
+- **View = Page Content**
+
+---
+
+## 📌 What’s Next?
+
+In next lecture:
+
+- Partial Views  
+- Reusable UI components inside pages  
+
+---
