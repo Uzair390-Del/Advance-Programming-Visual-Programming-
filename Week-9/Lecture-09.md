@@ -11,6 +11,7 @@ In this lab, students will learn:
 - How to add a Controller
 - What is an Action Method
 - How to run a basic MVC application
+- Github Link 'https://github.com/Uzair390-Del/WebApplicationMVC-Week9'
 
 ---
 
@@ -32,11 +33,15 @@ MVC stands for:
 
 - **Model** → Handles data and business logic  
 - **View** → Handles UI (what user sees)  
-- **Controller** → Handles user input and controls flow  
+- **Controller** → Handles user input and controls flow 
+
 
  In simple words:
 
 > Controller acts like a **middleman** between Model and View.
+## MVC Diagram
+
+![MVC Architecture](mvc.png)
 
 ---
 
@@ -905,3 +910,226 @@ In next lecture:
 - Reusable UI components inside pages  
 
 ---
+## 📌 Introduction
+
+In the previous lecture, we learned about **Layouts**, which are used for common UI across all pages.
+
+👉 But sometimes, we need reusable UI only for **some specific pages**, not all.
+
+For this purpose, MVC provides:
+
+> **Partial Views**
+
+---
+
+## 🧠 What is a Partial View?
+
+A **Partial View** is a reusable UI component that can be used in multiple views.
+
+👉 In simple words:
+
+> Partial View = **Reusable small UI block**
+
+---
+
+## 💡 Key Idea
+
+- Used for **common UI in some pages (not all)**
+- Avoids repeating same code
+- Improves:
+  - Code reusability  
+  - Maintainability  
+  - Development speed  
+
+---
+
+## 🧩 Real-World Example
+
+Suppose you have:
+
+- Add Employee Page  
+- Update Employee Page  
+
+👉 Both need:
+- Name  
+- Salary  
+
+But another page (e.g., Category Page) does NOT need salary.
+
+👉 So instead of repeating code:
+
+> We create a **Partial View** for Employee Form
+
+---
+
+## 📁 Where to Create Partial Views?
+
+Usually inside controller-specific folder:
+
+```
+Views/
+├── Employee/
+│   ├── Partial/
+```
+
+---
+
+## 🛠️ Step-by-Step: Creating a Partial View
+
+### Step 1: Create Folder
+
+- Go to `Views/Employee`
+- Create new folder:
+
+```
+Partial
+```
+
+---
+
+### Step 2: Add Partial View
+
+1. Right-click on `Partial` folder  
+2. Click **Add → View**  
+3. ✔ Check **"Partial View" option**  
+4. Name it:
+
+```
+_EmployeeForm.cshtml
+```
+
+---
+
+## 🧩 Writing Partial View Code
+
+Example:
+
+```html
+<label>Name</label>
+<input type="text" />
+
+<label>Salary</label>
+<input type="text" />
+
+<button type="submit">Submit</button>
+```
+
+👉 This is a reusable form UI
+
+---
+
+## 🔗 Using Partial View in Main View
+
+To use partial in a view:
+
+```csharp
+@Html.Partial("~/Views/Employee/Partial/_EmployeeForm.cshtml")
+```
+
+👉 This will render the partial inside your page.
+
+---
+
+## 🧪 Using Partial in Multiple Views
+
+### In AddEmployee.cshtml
+
+```csharp
+@Html.Partial("~/Views/Employee/Partial/_EmployeeForm.cshtml")
+```
+
+### In UpdateEmployee.cshtml
+
+```csharp
+@Html.Partial("~/Views/Employee/Partial/_EmployeeForm.cshtml")
+```
+
+---
+
+## ▶️ Output Behavior
+
+👉 Both pages will show:
+
+- Name textbox  
+- Salary textbox  
+- Submit button  
+
+👉 But:
+
+- Index page → No partial (if not added)
+
+---
+
+## 🧠 Key Observation
+
+- Partial is only used where needed  
+- Not applied globally like Layout  
+
+---
+
+## 🎨 When to Use Partial Views?
+
+Use Partial Views when:
+
+- Same UI is used in multiple pages  
+- Forms are repeated  
+- Small UI components are reused  
+
+👉 Examples:
+
+- Forms  
+- Message sections  
+- Reusable UI blocks  
+
+---
+
+## ⚠️ Important Notes
+
+- Partial Views are optional  
+- Used for specific reuse, not global UI  
+- Improve performance and code readability  
+- Avoid duplication in large projects  
+
+---
+
+## 🧪 Mini Practice
+
+**Task:**
+
+- Create EmployeeController  
+- Add actions:
+  - AddEmployee  
+  - UpdateEmployee  
+
+- Create Partial View:
+  - _EmployeeForm.cshtml  
+
+- Add form fields:
+  - Name  
+  - Salary  
+
+- Use partial in both views  
+
+---
+
+## 📝 Summary
+
+- Partial View = Reusable UI component  
+- Used in multiple views  
+- Avoids code repetition  
+- Improves maintainability  
+
+👉 In short:
+
+- Layout = Common for ALL pages  
+- Partial = Common for SOME pages  
+
+---
+
+## 📌 What’s Next?
+
+In next lecture:
+
+- Model in MVC  
+- Data handling and business logic
+
