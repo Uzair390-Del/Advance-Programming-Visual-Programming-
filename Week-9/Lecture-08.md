@@ -199,30 +199,36 @@ Inside an action method, we can:
 - Different Types of Action Results
 - Returning a View
 ### return View();
+---
 
 - Used when:
 
 You want to display a UI page
  -  Returning Content
 return Content("Hello Students!");
+---
 
  Used when:
 
 You want to display simple text in browser
  -  Redirect to External URL
 return Redirect("https://example.com");
+---
 
  Used when:
+
 
 You want to open another website
 - Redirect to Another Action
 return RedirectToAction("Index");
+---
 
  Used when:
 
 You want to move to another action in same controller
 - Redirect to Action in Another Controller
 return RedirectToAction("AddProduct", "Product");
+---
 
 - Important Rule:
 
@@ -232,16 +238,16 @@ Second parameter → Controller Name (without "Controller")
 
 ---
 
-In real-world applications:
+### In real-world applications:
 
 We have multiple controllers
 Each controller has multiple action methods
 
 - Example:
 
-HomeController
-ProductController
-StudentController
+1. HomeController
+2. ProductController
+3. StudentController
 
 - Each controller handles different parts of the application.
 
@@ -261,12 +267,16 @@ Inside ProductController
 We can also pass data (parameters) to action methods.
 
 Example:
+```csharp
 public ActionResult UpdateProduct(int id)
 {
     return Content("Product ID: " + id);
 }
-🔄 Redirect with Parameters
+```
+-  Redirect with Parameters
+```csharp
 return RedirectToAction("UpdateProduct", "Product", new { id = 20 });
+```
 
 👉 Output:
 
@@ -289,6 +299,7 @@ Action methods usually return ActionResult
 Task:
 Create a controller named ProductController
 Add the following actions:
+```csharp
 public ActionResult Index()
 {
     return Content("Product Home");
@@ -303,15 +314,16 @@ public ActionResult GoToAddProduct()
 {
     return RedirectToAction("AddProduct");
 }
-📝 Summary
+```
+###  Summary
 Action methods are the core of MVC logic
 They handle:
-Data
-Processing
-Navigation
+- Data
+- Processing
+- Navigation
 They return results using ActionResult
 
-👉 In short:
+** In short **:
 
-Controller = Brain of MVC
-Action Methods = Working units inside the brain
+- Controller = Brain of MVC
+- Action Methods = Working units inside the brain
