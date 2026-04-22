@@ -1128,8 +1128,161 @@ Use Partial Views when:
 
 ##  What’s Next?
 
-In next lecture:
+In next Topic:
 
 - Model in MVC  
 - Data handling and business logic
 
+## Objective
+
+By the end of this lab, students will be able to: - Understand the role
+of the Model in MVC architecture - Create a model class - Pass data from
+the controller to the view using models - Display model data in a view -
+Work with both single objects and collections (lists) of models
+
+## Prerequisites
+
+Before starting this lab, students should be familiar with: - MVC
+Architecture (Model, View, Controller) - Basic C# class structure -
+Controllers and Views in MVC
+
+## Introduction to Model in MVC
+
+The Model is a core component of the MVC architecture.
+
+### Definition
+
+A Model: - Represents domain-specific data and business logic -
+Maintains application data - Interacts with the database or persistence
+layer - Acts as an encapsulated class for storing and transferring data
+
+### MVC Flow Recap
+
+-   Controller creates and fills the model
+-   Model holds the data
+-   View displays the data to the user
+
+## Lab Task 1: Create a Model Class
+
+### Step 1: Add Model Class
+
+-   Right-click on the Models folder
+-   Select Add → Class
+-   Name the class: Employee
+
+### Step 2: Define Properties
+
+Create properties inside the Employee class: - Id - Name - Salary
+
+- These properties will store the data entered or retrieved.
+
+## Lab Task 2: Use Model in Controller
+
+### Step 1: Create Model Object
+
+Inside your controller: - Create an instance of Employee - Assign
+values: - Id = 1 - Name = "Charles" - Salary = 5000
+
+### Step 2: Send Model to View
+
+``` csharp
+return View(employee);
+```
+
+## Lab Task 3: Create and Use View
+
+### Step 1: Create View
+
+-   Right-click inside the controller action
+-   Select Add View
+-   Choose Empty Template
+
+### Step 2: Define Model in View
+
+``` csharp
+@model ProjectName.Models.Employee
+```
+
+## Lab Task 4: Display Data in View
+
+### Step 1: Create HTML Table
+
+Add a table with: - Header row (Id, Name, Salary) - Data row using model
+values
+
+### Step 2: Access Model Data
+
+``` csharp
+@Model.Id
+@Model.Name
+@Model.Salary
+```
+
+## Output
+
+A table displaying: - Employee Id - Employee Name - Employee Salary
+
+## Lab Task 5: Working with Multiple Records
+
+### Problem
+
+A single object only shows one row. Real applications require multiple
+records.
+
+### Step 1: Create List of Employees
+
+In controller: - Create a list of Employee - Add multiple objects: -
+Employee 1 → Charles (5000) - Employee 2 → Bernard (4000)
+
+### Step 2: Send List to View
+
+``` csharp
+return View(employeeList);
+```
+
+### Step 3: Update View Model Type
+
+``` csharp
+@model List<ProjectName.Models.Employee>
+```
+
+## Lab Task 6: Display List Using Loop
+
+### Why Loop?
+
+Because the model is now a collection, not a single object.
+
+### Step 1: Use foreach Loop
+
+``` csharp
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.Salary</td>
+    </tr>
+}
+```
+
+## Final Output
+
+A table displaying multiple employees dynamically.
+
+## Key Concepts Learned
+
+-   Model represents data + business logic
+-   Controllers populate models
+-   Views render model data
+-   Use List`<T>`{=html} for multiple records
+-   Use foreach loop to display collections
+
+## Conclusion
+
+In this lab, you learned how to: - Create and use models in MVC - Pass
+data from controller to view - Display both single and multiple records
+
+## Next Lab Preview
+
+In the next session, you will learn: - Handling HTTP GET - Handling HTTP
+POST in MVC
