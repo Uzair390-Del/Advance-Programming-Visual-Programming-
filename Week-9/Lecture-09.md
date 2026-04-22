@@ -1282,7 +1282,142 @@ A table displaying multiple employees dynamically.
 In this lab, you learned how to: - Create and use models in MVC - Pass
 data from controller to view - Display both single and multiple records
 
-## Next Lab Preview
+## Next Topic Preview
 
 In the next session, you will learn: - Handling HTTP GET - Handling HTTP
 POST in MVC
+## Objective
+
+By the end of this lab, students will be able to: - Understand the
+concept of HTTP protocol\
+- Differentiate between HTTP GET and HTTP POST methods\
+- Create forms to collect user input\
+- Send data from View to Controller using POST\
+- Bind form data to a Model\
+- Handle user input in MVC applications
+
+## Prerequisites
+
+Students should have prior knowledge of: - MVC Architecture (Model,
+View, Controller)\
+- Creating Models and Views\
+- Basic HTML form elements\
+- C# classes and properties
+
+## Introduction to HTTP in Web Applications
+
+### What is HTTP?
+
+HTTP (HyperText Transfer Protocol) is used to: - Send data between
+client (browser) and server\
+- Handle communication through web pages
+![HTTP](http.png)
+
+
+## HTTP Methods Overview
+
+### HTTP GET
+
+-   Sends data via URL\
+-   Data is visible in the address bar\
+-   Limited data length (\~255 characters)\
+-   Supports string data only\
+-   Less secure
+
+### HTTP POST
+
+-   Sends data via request body\
+-   Data is not visible in the URL\
+-   No practical size limitation\
+-   Supports string and binary data\
+-   More secure and widely used
+
+## Key Difference
+
+  Feature         HTTP GET      HTTP POST
+  --------------- ------------- -----------------
+  Data Location   URL           Request Body
+  Security        Low           Higher
+  Data Limit      Limited       Large
+  Data Type       String only   String + Binary
+
+## Lab Task 1: Understanding Form Submission
+
+To send user data from a View to a Controller: - Use an HTML form\
+- Set method="post"
+
+## Lab Task 2: Preparing the View
+
+### Model Declaration
+
+``` csharp
+@model ProjectName.Models.Employee
+```
+
+### Input Fields
+
+``` html
+<input type="number" name="Id" />
+<input type="text" name="Name" />
+<input type="number" name="Salary" />
+```
+
+## Lab Task 3: Create Form
+
+``` html
+<form method="post">
+    <!-- Form Content -->
+</form>
+```
+
+## Lab Task 4: Controller Setup
+
+### GET Method
+
+``` csharp
+public ActionResult AddEmployee()
+{
+    Employee emp = new Employee();
+    return View(emp);
+}
+```
+
+### POST Method
+
+``` csharp
+[HttpPost]
+public ActionResult AddEmployee(Employee employee)
+{
+    // Process data
+    return View();
+}
+```
+
+## Lab Task 5: Testing the Application
+
+Steps: 1. Run the application\
+2. Fill the form\
+3. Click Submit
+
+Expected Result: - Data is sent to controller\
+- POST method is triggered\
+- Model contains submitted values
+
+## Key Concepts Learned
+
+-   HTTP communication\
+-   GET vs POST\
+-   Form submission\
+-   Model binding\
+-   Controller handling
+
+## Conclusion
+
+You learned how to: - Use HTTP POST\
+- Bind form data to model\
+- Handle user input in MVC
+
+## Next Lab
+
+-   Database operations\
+-   CRUD implementation
