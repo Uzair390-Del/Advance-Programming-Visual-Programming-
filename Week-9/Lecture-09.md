@@ -1294,7 +1294,7 @@ concept of HTTP protocol\
 - Create forms to collect user input\
 - Send data from View to Controller using POST\
 - Bind form data to a Model\
-- Handle user input in MVC applications
+- Handle user input in MVC applications . 
 
 ## Prerequisites
 
