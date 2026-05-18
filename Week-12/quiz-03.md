@@ -506,7 +506,7 @@ Model
    ↓
 View
    ↓
-Layout
+Layout out
    ↓
 Partial View
    ↓
